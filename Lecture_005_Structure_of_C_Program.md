@@ -1,4 +1,4 @@
-# 🎥 Video 5 – Structure of a C Program
+ Structure of a C Program
 
 ---
 
