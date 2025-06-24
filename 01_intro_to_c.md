@@ -6,6 +6,7 @@
 - Developed at **Bell Laboratories**
 - C is the **successor of B language**
 - It was **standardized by ANSI in 1989** (ANSI C)
+- **ANSI C** stands for **American National Standards Institute - C**
 
 ---
 
