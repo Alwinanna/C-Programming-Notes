@@ -69,4 +69,5 @@ This guide is designed to help you practice what you've learned from Jenny’s l
 
 ---
 
-Happy Coding! 🚀 Feel free to fork this into your GitHub repo or paste it into your notes.
+
+
