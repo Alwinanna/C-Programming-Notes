@@ -1,1 +1,159 @@
+# 🎓 Lecture 007 – Constants in C Programming
+
+---
+
+## 🔹 What is a Constant?
+
+A **constant** in C is a fixed value that **does not change** during the execution of a program.
+
+They help:
+- Make the code easier to understand
+- Prevent accidental value changes
+- Improve program safety and readability
+
+---
+
+## ✅ Types of Constants in C
+
+Constants are mainly classified into two types:
+
+1.Numeric Constants
+2.Character Constants
+
+
+
+---
+
+## 🔢 1. Numeric Constants
+
+### 🔸 a) Integer Constants
+
+Integer constants are **whole numbers** without decimal points.  
+They can be written in **decimal**, **octal**, or **hexadecimal** form.
+
+| Type         | Format            | Example      |
+|--------------|-------------------|--------------|
+| Decimal      | Digits 0–9        | `10`, `-5`   |
+| Octal        | Starts with `0`   | `012`, `075` |
+| Hexadecimal  | Starts with `0x`  | `0xA`, `0xFF`|
+
+### 🔸 b) Floating Point Constants (Real Constants)
+
+These are numbers that contain a decimal point or are written in exponential (scientific) notation.
+
+| Example       | Meaning                              |
+|---------------|--------------------------------------|
+| `3.14`        | A float value                        |
+| `-0.01`       | A negative float                     |
+| `6.022e23`    | Scientific notation (6.022 × 10^23)  |
+
+---
+
+## 🔤 2. Character Constants
+
+### 🔸 a) Single Character Constants
+
+- Enclosed in **single quotes** (`' '`)
+- Represents a **single character**
+
+```c
+'A', 'z', '5', '$'
+
+b) String Constants
+.Enclosed in double quotes (" ")
+.Represents a sequence of characters
+
+"Hello", "123", "C Programming"
+
+📊 Summary Table
+
+| Constant Type         | Example   | Notes                        |
+| --------------------- | --------- | ---------------------------- |
+| Integer (Decimal)     | `25`      | Base 10                      |
+| Integer (Octal)       | `031`     | Starts with `0`              |
+| Integer (Hexadecimal) | `0x2F`    | Starts with `0x`             |
+| Floating Point        | `3.14`    | Includes decimal or exponent |
+| Single Character      | `'A'`     | Single quotes                |
+| String Constant       | `"Hello"` | Double quotes                |
+
+## 🔎 Rules for Writing Constants in C (with Examples)
+
+Below are examples of **valid** and **invalid** constants. Each rule includes a reason why it is or isn't allowed.
+
+| Example   | Valid?  | Reason / Rule                                             |
+|-----------|---------|------------------------------------------------------------|
+| `012`     | ✅ Yes  | Valid **octal** constant (starts with 0)                   |
+| `123`     | ✅ Yes  | Valid **decimal** constant                                 |
+| `0xAF`    | ✅ Yes  | Valid **hexadecimal** constant (starts with `0x`)          |
+| `25,000`  | ❌ No   | Commas not allowed in numeric constants                    |
+| `12 34`   | ❌ No   | Spaces not allowed in constants                            |
+| `0x`      | ❌ No   | Incomplete hexadecimal constant (must follow with digits)  |
+| `#123`    | ❌ No   | `#` is not allowed; used for preprocessor directives        |
+
+---
+
+### ✅ Correct Examples
+
+```c
+int a = 123;        // Decimal constant
+int b = 012;        // Octal constant (means 10 in decimal)
+int c = 0xAF;       // Hexadecimal constant (means 175 in decimal)
+
+❌ Incorrect Examples
+
+int x = 25,000;     // ❌ Error: Comma not allowed
+int y = 12 34;      // ❌ Error: Space not allowed
+int z = 0x;         // ❌ Error: Incomplete hex
+int w = #123;       // ❌ Error: # is not allowed in constants
+
+1. Declaring Constants in C
+📌 Using #define (Preprocessor Macro)
+#define MAX 50
+📌 Using const keyword (Typed Constant)
+const int a = 10;
+
+
+note 
+char ch = 'a';     // ✅ Single character
+char* str = "a";   // ✅ String (character array)
+
+
+📝 Choose whether the following are valid single character constants or not:
+
+| Example | Valid? | Reason                       |
+| ------- | ------ | ---------------------------- |
+| `'A'`   | ✅ Yes  | Single char in single quotes |
+| `'9'`   | ✅ Yes  | Single digit, valid char     |
+| `'@'`   | ✅ Yes  | Special characters allowed   |
+| `"A"`   | ❌ No   | Double quotes = string       |
+| `''`    | ❌ No   | Empty character constant     |
+| `'AB'`  | ❌ No   | Too many characters          |
+| `' '`   | ✅ Yes  | Valid space character        |
+
+
+sample code
+
+#include <stdio.h>
+
+int main() {
+    const char grade = 'A';      // Valid single character
+    const char digit = '5';      // Also valid
+    const char space = ' ';      // Space character
+
+    printf("Grade: %c\n", grade);
+    printf("Digit: %c\n", digit);
+    printf("Space: [%c]\n", space);  // Output will show a space
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
